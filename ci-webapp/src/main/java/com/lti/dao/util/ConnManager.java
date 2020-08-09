@@ -12,7 +12,7 @@ public class ConnManager {
 		try {
 			Properties dbProps = new Properties();
 			//dbProps.load(new FileReader("dev-db.properties")); FileNotFoundException
-			dbProps.load(ConnManager.class.getClassLoader().getResourceAsStream("dev-db.properties"));
+			dbProps.load(ConnManager.class.getClassLoader().getResourceAsStream("prod-db.properties"));
 			
 			Class.forName(dbProps.getProperty("driverName"));
 			//String url = "jdbc:derby://localhost:1527/trainingdb";
